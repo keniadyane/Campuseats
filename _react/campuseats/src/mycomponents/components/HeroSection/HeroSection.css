@@ -1,0 +1,234 @@
+.hero-main-container {
+  position: relative;
+  z-index: 1;
+  transform: rotate(0.003146693868118023rad);
+  border: 1px solid rgba(0, 0, 0, 1);
+  padding-bottom: 112px;
+  overflow: hidden;
+}
+
+.hero-background-wrapper {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 811px;
+  width: 100%;
+  padding: 22px 0;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.hero-background-image {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-content-image {
+  aspect-ratio: 1.78;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+}
+
+/* Contenedor para los títulos */
+.hero-titles-container {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.5rem;
+}
+
+.hero-title,
+.hero-title2,
+.hero-title3 {
+  font-size: clamp(1.8rem, 4vw, 3.1rem);
+  font-weight: 600;
+  color: #000000;
+  text-align: right;
+  line-height: 1.2;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+/* Contenedor para los botones */
+.hero-buttons-container {
+  position: absolute;
+  bottom: 20%;
+  right: 5%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-end;
+}
+
+.hero-button,
+.hero-button2 {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  display: flex;
+  border-radius: 100px;
+  height: clamp(70px, 8vw, 90px);
+  width: 100%;
+  max-width: 230px;
+  min-width: 180px;
+  align-items: center;
+  justify-content: center;
+  background-color: #c3e7b8;
+  border: 2px solid #c3e7b8;
+  color: #000000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.hero-button:hover,
+.hero-button2:hover {
+  background: linear-gradient(135deg, #568bbd, #d8cbae);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(7, 26, 112, 0.562);
+}
+
+/* Media Queries para diferentes tamaños de pantalla */
+
+/* Tablets grandes */
+@media (max-width: 1200px) {
+  .hero-titles-container {
+    right: 8%;
+    top: 12%;
+  }
+  
+  .hero-buttons-container {
+    right: 8%;
+    bottom: 15%;
+  }
+}
+
+/* Tablets */
+@media (max-width: 991px) {
+  .hero-main-container {
+    padding-bottom: 80px;
+  }
+
+  .hero-background-wrapper {
+    max-width: 100%;
+    padding: 20px;
+    min-height: 600px;
+  }
+
+  .hero-content-image {
+    max-width: 100%;
+  }
+
+  .hero-titles-container {
+    position: relative;
+    top: auto;
+    right: auto;
+    text-align: center;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 0 1rem;
+  }
+
+  .hero-title,
+  .hero-title2,
+  .hero-title3 {
+    text-align: center;
+  }
+
+  .hero-buttons-container {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 0 1rem;
+  }
+
+  .hero-button,
+  .hero-button2 {
+    max-width: 280px;
+  }
+}
+
+/* Móviles grandes */
+@media (max-width: 768px) {
+  .hero-background-wrapper {
+    min-height: 500px;
+    padding: 15px;
+  }
+
+  .hero-titles-container {
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .hero-buttons-container {
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .hero-button,
+  .hero-button2 {
+    max-width: 250px;
+    min-width: 200px;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  .hero-main-container {
+    padding-bottom: 60px;
+  }
+
+  .hero-background-wrapper {
+    min-height: 400px;
+    padding: 10px;
+  }
+
+  .hero-titles-container {
+    gap: 0.8rem;
+    margin: 1rem 0;
+  }
+
+  .hero-buttons-container {
+    gap: 0.8rem;
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  .hero-button,
+  .hero-button2 {
+    max-width: 100%;
+    min-width: auto;
+    width: 90%;
+  }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 360px) {
+  .hero-background-wrapper {
+    min-height: 350px;
+  }
+
+  .hero-titles-container {
+    gap: 0.6rem;
+  }
+
+  .hero-buttons-container {
+    gap: 0.6rem;
+  }
+}

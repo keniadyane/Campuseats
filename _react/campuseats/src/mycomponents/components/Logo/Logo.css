@@ -1,0 +1,19 @@
+.logo {
+  object-fit: contain;
+  object-position: center;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+.logo--navbar {
+  aspect-ratio: 2.04;
+  width: 216px;
+  align-self: stretch;
+}
+
+.logo--navbar-end {
+  aspect-ratio: 1.02;
+  width: 99px;
+  align-self: stretch;
+  margin: auto 0;
+}

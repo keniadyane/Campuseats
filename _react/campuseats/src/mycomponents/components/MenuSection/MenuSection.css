@@ -1,0 +1,263 @@
+/* MenuSection.css - Versión Mejorada */
+
+.menu-section {
+  padding: 2rem 0;
+  background: linear-gradient(135deg, #ffffff 0%, #ebe7e6 100%);
+  min-height: 100vh;
+}
+
+.menu-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.menu-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #183e61;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Filtros de categorías */
+.category-filters {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  color: #183e61;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.filter-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: rgba(255, 255, 255, 0.9);
+  color: #646c91;
+  border-color: white;
+}
+
+.filter-icon {
+  font-size: 1.2rem;
+}
+
+.filter-name {
+  font-size: 0.9rem;
+}
+
+/* Grid de productos */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+/* Cards de productos */
+.menu-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  height: fit-content;
+}
+
+.menu-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #c7c8cc, #ddd7e2);
+}
+
+.menu-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.item-emoji {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #2e3d80, #183e61);
+  padding: 0.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4e65cc;
+  background: rgba(102, 126, 234, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.card-body {
+  margin-bottom: 1.5rem;
+}
+
+.item-name {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.item-description {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.add-btn {
+  width: 100%;
+  padding: 0.75rem;
+    border: 1px solid #183E61;
+  background-color: #F0EDE6;
+  color: #183E61;
+  font-weight: 600;
+  color: 183E61;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.add-btn:hover {
+  background: linear-gradient(135deg, #d8625a, #6b46c1);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.add-btn span:first-child {
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: rgba(255,255,255,0.2);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-section {
+    padding: 1rem 0;
+  }
+  
+  .menu-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .menu-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .menu-card {
+    padding: 1.25rem;
+  }
+  
+  .filter-btn {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .filter-name {
+    display: none;
+  }
+  
+  .filter-icon {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-container {
+    padding: 0 0.5rem;
+  }
+  
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .menu-title {
+    font-size: 1.8rem;
+  }
+  
+  .category-filters {
+    gap: 0.3rem;
+  }
+  
+  .filter-btn {
+    padding: 0.5rem;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.menu-card:nth-child(even) {
+  animation-delay: 0.1s;
+}
+
+.menu-card:nth-child(3n) {
+  animation-delay: 0.2s;
+}
